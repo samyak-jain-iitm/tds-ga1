@@ -26,9 +26,3 @@ jobs:
       # Step 3: Print cache status
       - name: Cache status
         run: echo "Cache hit? ${{ steps.cache-deps.outputs.cache-hit }}"
-
-      # Step 4: Install dependencies (example: pip)
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt

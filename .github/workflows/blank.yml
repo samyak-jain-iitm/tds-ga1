@@ -1,9 +1,17 @@
-# This is a basic workflow to help you get started with Actions
+name: Email Step Workflow
 
-name: CI
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   test:
+    runs-on: ubuntu-latest
     steps:
-      - name: "25ds1000058@ds.study.iitm.ac.in"
-        run: echo "Hello, world!"
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: 25ds1000058@ds.study.iitm.ac.in
+        run: echo "Hello, world! This step contains my email."

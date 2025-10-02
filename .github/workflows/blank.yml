@@ -5,5 +5,5 @@ name: CI
 jobs:
   test:
     steps:
-      - name: 25ds1000058@ds.study.iitm.ac.in
+      - name: "25ds1000058@ds.study.iitm.ac.in"
         run: echo "Hello, world!"

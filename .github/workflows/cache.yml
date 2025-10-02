@@ -11,18 +11,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code
+      # Checkout code
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Step 2: Setup cache
+      # Cache dependencies
       - name: prime-cache-f1fcb19
-        id: cache-deps
+        id: cache-deps        # <- this id is used to reference outputs
         uses: actions/cache@v4
         with:
-          path: ~/.cache/pip   # change this depending on what you want to cache
+          path: ~/.cache/pip
           key: cache-f1fcb19
 
-      # Step 3: Print cache status
-      - name: Cache status
+      # Print cache status
+      - name: Show cache hit/miss
         run: echo "Cache hit? ${{ steps.cache-deps.outputs.cache-hit }}"
